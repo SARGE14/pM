@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="pM.MainPage" BackgroundColor="#000000">
+
+    <StackLayout>
+        <Grid Margin="0,20,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Label Text="BTC" FontSize="Large" TextColor="#5A5A5A" HorizontalOptions="Center"  Grid.Column="0" Grid.Row="0"/>
+            <Label Text="ETH" FontSize="Large" TextColor="#5A5A5A" HorizontalOptions="Center" Grid.Column="1" Grid.Row="0"/>
+            <Entry x:Name="priceBtc" Text="9000,99"  Grid.Column="0" Grid.Row="1"/>
+            <Entry x:Name="priceEth" Text="170,99" Grid.Column="1" Grid.Row="1"/>
+        </Grid>
+        <Label Text="Livecoin" FontSize="Large" TextColor="#6E6E6E" HorizontalOptions="Center" />
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Label Text="Продажа" FontSize="Large" TextColor="#5A5A5A" HorizontalOptions="Center"  Grid.Column="0" Grid.Row="0"/>
+            <Label Text="Покупка" FontSize="Large" TextColor="#5A5A5A" HorizontalOptions="Center" Grid.Column="1" Grid.Row="0"/>
+            <Entry x:Name="priceBtcBuy_livecoin" TextColor="Green" Text="0,00040400"  Grid.Column="1" Grid.Row="1"/>
+            <Entry x:Name="priceBtcSell_livecoin" TextColor="Red"  Text="0,00050500" Grid.Column="0" Grid.Row="1"/>
+        </Grid>
+        <Label Text="HitBTC" FontSize="Large" TextColor="#6E6E6E" HorizontalOptions="Center" />
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Label Text="Продажа" FontSize="Large" TextColor="#5A5A5A" HorizontalOptions="Center"  Grid.Column="0" Grid.Row="0"/>
+            <Label Text="Покупка" FontSize="Large" TextColor="#5A5A5A" HorizontalOptions="Center" Grid.Column="1" Grid.Row="0"/>
+            <Entry x:Name="priceBtcBuy_hitbtc" TextColor="Green" Text="0,00040400"  Grid.Column="1" Grid.Row="1"/>
+            <Entry x:Name="priceBtcSell_hitbtc" TextColor="Red"  Text="0,00050500" Grid.Column="0" Grid.Row="1"/>
+        </Grid>
+        <Label Text="YoBit" FontSize="Large" TextColor="#6E6E6E" HorizontalOptions="Center" />
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Label Text="Продажа" FontSize="Large" TextColor="#5A5A5A" HorizontalOptions="Center"  Grid.Column="0" Grid.Row="0"/>
+            <Label Text="Покупка" FontSize="Large" TextColor="#5A5A5A" HorizontalOptions="Center" Grid.Column="1" Grid.Row="0"/>
+            <Entry x:Name="priceBtcBuy_yobit" TextColor="Green" Text="0,00040400"  Grid.Column="1" Grid.Row="1"/>
+            <Entry x:Name="priceBtcSell_yobit" TextColor="Red"  Text="0,00050500" Grid.Column="0" Grid.Row="1"/>
+        </Grid>
+        <Button x:Name="updateButton" Text="Обновить" Clicked="OnButtonClicked"/>
+        <Switch x:Name="updateSwitch" IsToggled="False"  Toggled= "UpdateSwitchToggled" HorizontalOptions="End"/>
+        <Label x:Name="messageText" Text="Уведомления" FontSize="Large" TextColor="#5A5A5A" HorizontalOptions="Center"/>
+        <Label x:Name="errorText" Text="Ошибка" FontSize="Large" TextColor="#3D3D3D" HorizontalOptions="End" VerticalOptions="EndAndExpand"/>
+    </StackLayout>
+</ContentPage>
